@@ -1,0 +1,9 @@
+# Core MLX runtime (Apple Silicon)
+mlx>=0.29.3
+mlx-metal>=0.29.3; platform_system == "Darwin" and platform_machine == "arm64"
+
+# mlx-lm with MiniMax support (pinned to commit adding minimax backend)
+mlx-lm @ git+https://github.com/ml-explore/mlx-lm@b83d39b161352a90ea409b20ab4a5cd4fce4a1fd
+
+# Optional but common utilities for HF downloads (pulled transitively by mlx-lm)
+huggingface-hub>=0.23.2
